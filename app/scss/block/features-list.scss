@@ -1,0 +1,91 @@
+.features-list__item {
+  position: relative;
+
+  margin-bottom: vw(37, $maxWidth);
+  padding-left: vw(80, $maxWidth);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+
+    width: vw(60, $maxWidth);
+    height: vw(60, $maxWidth);
+
+    border-radius: 50%;
+    box-shadow: 0px 4px 35px rgba(25, 130, 189, 0.18);
+    
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+
+    @media (max-width: #{$tabletWidth + px}) {
+      width: vw(60, 768);
+      height: vw(60, 768);
+    }
+
+    @media (max-width: #{$mobileWidth + px}) {
+      width: 35.83px;
+      height: 35.83px;
+
+      background-size: 18px;
+    }
+  }
+
+  @media (max-width: #{$tabletWidth + px}) {
+    margin-bottom: vw(39, 768);
+    padding-left: vw(80, 768);
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-bottom: 25px;
+    padding-left: 48px;
+  }
+}
+
+.features-list__item--eco-friendliness {
+  &::before {
+    background-image: url(../../img/svgicons/leaf.svg);
+  }
+}
+
+.features-list__item--balance {
+  &::before {
+    background-image: url(../../img/svgicons/checkmark.svg);
+  }
+}
+
+.features-list__item--individuality {
+  &::before {
+    background-image: url(../../img/svgicons/curved-arrow.svg);
+  }
+}
+
+.features-list__item--benefit {
+  &::before {
+    background-image: url(../../img/svgicons/health-care.svg);
+  }  
+}
+
+.features-list__title {
+  margin-bottom: vw(11, $maxWidth);
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-bottom: 6px;
+  }
+}
+
+.features-list__text {
+  font-size: vw(18, $maxWidth);
+  line-height: calc(21 / 18);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    font-size: 18px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    font-size: 14px;
+  }
+}

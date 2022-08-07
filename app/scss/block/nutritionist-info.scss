@@ -1,0 +1,93 @@
+.nutritionist-info {
+  position: relative;
+
+  width: vw(502, $maxWidth);
+  height: auto;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    width: 100%;
+    height: vw(420, 768);
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    width: 100%;
+    @include adaptiv-value(height, 620, 315, 0);
+  }
+}
+
+.nutritionist-info__img {
+  position: absolute;
+  bottom: 0;
+  left: vw(-108, $maxWidth);
+
+  width: vw(626, $maxWidth);
+  height: auto;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: vw(538, 768);
+    height: vw(500, 768);
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    top: auto;
+    bottom: -13px;
+
+    @include adaptiv-value(width, 626, 320, 0);
+    height: auto;
+  }
+}
+
+.nutritionist-info__text {
+  position: absolute;
+  left: vw(35, $maxWidth);
+  bottom: prc(-32, 310);
+
+  padding: 9px vw(40, $maxWidth) 11px;
+
+  text-align: center;
+  
+  background-color: $white;
+  border: 1px dashed $green;
+  border-radius: 65px;
+  box-shadow: 0 0 0 5px $white,
+              0 21px 133px rgba(17, 95, 0, 0.21);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    left: 50%;
+    bottom: -110px;
+    transform: translateX(-50%);
+    padding: 8px vw(25, 768) 5px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    bottom: -73px;
+    
+    padding: 9px vw(19, $minMobileWidth) 11px vw(15, $minMobileWidth);
+  }
+}
+
+.nutritionist-info__name {
+  font-size: vw(16, $maxWidth);
+  font-weight: 700;
+  line-height: calc(22 / 16);
+  white-space: nowrap;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    font-size: 15px;
+  }
+}
+
+.nutritionist-info__position {
+  font-weight: 600;
+  font-size: vw(14, $maxWidth);
+  line-height: calc(20 / 14);
+  color: #6C997F;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    font-size: 14px;
+  }
+}

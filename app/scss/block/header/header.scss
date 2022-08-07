@@ -1,0 +1,35 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  
+  background: transparent;
+}
+
+.header__wrapper {
+  display: flex;
+  margin-top: 40px;
+}
+
+.header__wrapper-menu {
+  display: flex;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.header__logo {
+  margin-left: vw(50, $maxWidth);
+  margin-right: vw(185, $maxWidth);
+
+  line-height: 1.4;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    margin-left: 0;
+  }
+}

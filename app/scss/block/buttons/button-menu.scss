@@ -1,0 +1,74 @@
+.button-menu {
+  display: none;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: 38px;
+    height: 28px;
+  }
+}
+
+.button-menu__checkbox {
+  position: absolute;
+  z-index: 5;
+
+  width: 38px;
+  height: 28px;
+  opacity: 0;
+  
+  cursor: pointer;
+}
+
+.button-menu__hamburger-lines {
+  position: absolute;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 38px;
+  height: 28px;
+}
+
+.button-menu__line {
+  width: 100%;
+  height: 6px;
+
+  border-radius: 32px;
+  background-color: $green;
+
+  &--1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &--2 {
+    transition: transform 0.1s ease-in-out;
+  }
+
+  &--3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+.button-menu__checkbox:checked ~ .button-menu__hamburger-lines .button-menu__line {
+  
+  &--1 {
+    transform: rotate(40deg);
+  }
+
+  &--2 {
+    transform: scaleY(0);
+  }
+
+  &--3 {
+    transform: rotate(-40deg);
+  }
+}
+
+
+

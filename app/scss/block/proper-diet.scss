@@ -1,0 +1,74 @@
+.proper-diet {
+  position: relative;
+  padding: vw(68, $maxWidth) 0 0 0;
+  background-color: $green;
+  background-image: url(../../img/svgicons/circles.svg),
+                    url(../../img/svgicons/circles.svg);
+  background-repeat: no-repeat;
+  background-position:  left -206px bottom 114px,
+                        right -220px top 126px;
+
+  @media (min-width: #{$tabletWidth + px}) {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      // bottom: 0;
+      right: 0;
+      width: vw(676, $maxWidth);
+      height: 100%;
+  
+      background-image: linear-gradient(64.37deg, $green 8.32%, rgba(255, 255, 255, 0) 82.9%), 
+                        url(../../img/pattern-proper-diet.png);
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 35.521vw 22.69vw;
+      
+      opacity: 0.1;
+    }
+  }
+
+  @media (max-width: #{$tabletWidth + px}) {
+    padding: 50px 0 0 0;
+    background-image: url(../../img/svgicons/circles.svg);
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    background-image: none;
+  }
+}
+
+.proper-diet__wrapper {
+  position: relative;
+  display: flex;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.proper-diet__container {
+  padding-bottom: vw(64, $maxWidth);
+  width: vw(810, $maxWidth);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    padding-bottom: 0;
+    width: 442px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    width: 100%;
+  }
+}
+
+.proper-diet__title {
+  margin-bottom: vw(57, $maxWidth);
+  
+  color: $white;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-bottom: 39px;
+    margin-left: 20px;
+  }
+}

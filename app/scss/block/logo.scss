@@ -1,0 +1,17 @@
+.logo {
+  display: inline-block;
+  flex-shrink: 0;
+  
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  color: $black;
+
+  &--footer {
+    color: $white;
+  }
+
+  @media (max-width: #{$tabletWidth + px}) {
+    font-size: 16px;
+  }
+}

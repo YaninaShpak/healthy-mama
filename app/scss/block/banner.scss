@@ -1,0 +1,356 @@
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(0px) translateY(0%);
+  }
+
+  50% {
+    transform: translateX(900px) translateY(50vh);
+  }
+
+  100% {
+    transform: translateX(0px) translateY(100vh);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(0px) translateY(0%);
+  }
+
+  50% {
+    transform: translateX(-600px) translateY(50vh);
+  }
+
+  100% {
+    transform: translateX(0px) translateY(100vh);
+  }
+}
+
+@keyframes rotate {
+  40% {
+    transform: rotate(50deg);
+  }
+
+  100% {
+    transform: rotate(-50deg);
+  }
+}
+
+@keyframes rotateAlternate {
+  40% {
+    transform: rotate(-50deg);
+  }
+
+  100% {
+    transform: rotate(50deg);
+  }
+}
+
+.banner {
+  background-image: url(../../img/background-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    background-image: url(../../img/background-banner-tablet.jpg);
+  }
+}
+
+.banner__leaves {
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.banner__mint {
+  position: absolute;
+  top: vw(-100, $maxWidth);
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    display: block;
+    
+    background-image: url(../../img/mint.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--biggest,
+  &--big,
+  &--middle,
+  &--small,
+  &--smallest {
+    animation-iteration-count: infinite, infinite;
+    animation-timing-function: linear, linear;
+
+    &::after {
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      transform-origin: 50% -100%;
+    }
+  }
+
+  &--biggest,
+  &--big,
+  &--smallest {
+    animation-name: fade, right;
+    animation-duration: 11s, 11s;
+
+    &::after {
+      animation-name: rotate;
+    }
+  }
+
+  &--middle,
+  &--small {
+    animation-name: left, fade;
+    animation-duration: 10s, 10s;
+
+    &::after {
+      animation-name: rotateAlternate;
+      animation-duration: 6s;
+    }
+  }
+
+  &--biggest {
+    right: 0;
+
+    width: vw(250, $maxWidth);
+    height: vw(195, $maxWidth);
+
+    @media (max-width: #{$tabletWidth + px}) {
+      width: vw(100, 768);
+      height: vw(78, 768);
+    }
+    
+    &::after {
+      width: vw(250, $maxWidth);
+      height: vw(195, $maxWidth);
+      
+      animation-duration: 7s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+
+      @media (max-width: #{$tabletWidth + px}) {
+        width: vw(100, 768);
+        height: vw(78, 768);
+      }
+    }
+  }
+
+  &--big {
+    right: 50%;
+   
+    width: vw(128, $maxWidth);
+    height: vw(100, $maxWidth);
+   
+    animation-delay: 1s;
+
+    @media (max-width: #{$tabletWidth + px}) {
+      width: vw(51, 768);
+      height: vw(40, 768);
+    }
+
+    &::after {
+      width: vw(128, $maxWidth);
+      height: vw(100, $maxWidth);
+      
+      animation-duration: 6s;
+      animation-fill-mode: forwards;
+
+      @media (max-width: #{$tabletWidth + px}) {
+        width: vw(51, 768);
+        height: vw(40, 768);
+      }
+    }
+  }
+
+  &--middle {
+    left: 0;
+    width: vw(75, $maxWidth);
+    height: vw(59, $maxWidth);
+    
+    animation-delay: 3s;
+
+    @media (max-width: #{$tabletWidth + px}) {
+      width: vw(30, 768);
+      height: vw(24, 768);
+    }
+
+    &::after {
+      width: vw(75, $maxWidth);
+      height: vw(59, $maxWidth);
+      
+      animation-duration: 6s;
+
+      @media (max-width: #{$tabletWidth + px}) {
+        width: vw(30, 768);
+        height: vw(24, 768);
+      }
+    }
+  }
+
+  &--small {
+    right: 60%;
+    width: vw(80, $maxWidth);
+    height: vw(63, $maxWidth);
+    
+    animation-delay: 4s;
+
+    @media (max-width: #{$tabletWidth + px}) {
+      width: vw(32, 768);
+      height: vw(25, 768);
+    }
+
+    &::after {
+      width: vw(80, $maxWidth);
+      height: vw(63, $maxWidth);
+      
+      animation-duration: 6s;
+
+      @media (max-width: #{$tabletWidth + px}) {
+        width: vw(32, 768);
+        height: vw(25, 768);
+      }
+    }
+  }
+
+  &--smallest {
+    right: 40%;
+    width: vw(30, $maxWidth);
+    height: vw(24, $maxWidth);
+   
+    animation-delay: 5s;
+
+    @media (max-width: #{$tabletWidth + px}) {
+      width: vw(12, 768);
+      height: vw(9.5, 768);
+    }
+
+    &::after {
+      width: vw(30, $maxWidth);
+      height: vw(24, $maxWidth);
+      
+      animation-duration: 6s;
+
+      @media (max-width: #{$tabletWidth + px}) {
+        width: vw(12, 768);
+        height: vw(9.5, 768);
+      }
+    }
+  }
+}
+
+.banner__wrapper {
+  display: flex;
+  margin-bottom: vw(170, $maxWidth);
+
+  @media (min-width: #{$tabletWidth + px}) {
+    position: relative;
+  }
+
+  @media (max-width: #{$tabletWidth + px}) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-bottom: 30px;
+  }
+}
+
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 27.98vw;
+  max-width: 42%;
+  // margin-top: 350px;
+  @include adaptiv-value( margin-top, 350, 250, 0);
+  margin-left: vw(50, $maxWidth);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    align-items: center;
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-top: 195px;
+    margin-bottom: 100px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 116px;
+    margin-bottom: 0;
+  }
+}
+
+.banner__title {
+  margin-bottom: vw(29, $maxWidth);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    margin-bottom: 29px;
+
+    text-align: center;
+  }
+}
+
+.banner__slogan {
+  margin-right: vw(115, $maxWidth);
+  margin-bottom: vw(49, $maxWidth);
+
+  font-weight: 500;
+  @include adaptiv-font(23, 10);
+  line-height: calc(32 / 23);
+  color: #2B2B2B;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-bottom: 52px;
+
+    text-align: center;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-right: 10px;
+    margin-left: 10px;
+
+    font-size: 16px;
+  }
+}
+
+.banner__slider {
+  margin-top: 256px;
+  
+  @media (min-width: #{$tabletWidth + px}) {
+    position: absolute;
+    right: 0;
+  }
+  
+  @media (max-width: #{$tabletWidth + px}) {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    width: 100%;
+    margin-top: 100px;
+  }
+}

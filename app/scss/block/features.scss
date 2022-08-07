@@ -1,0 +1,59 @@
+.features {
+  margin-bottom: 10px;
+
+  background-image: url(../../img/tree.png),
+                    url(../../img/advantage-girls.png),
+                    url(../../img/background-delivery.jpg);
+  background-repeat: no-repeat;
+  background-position: left 0 top vw(400, $maxWidth),
+                       left vw(97, $maxWidth) top vw(176, $maxWidth),
+                       left 0 top vw(-115, $maxWidth);
+  background-size: vw(540, $maxWidth) auto, 
+                   vw(1349, $maxWidth) auto, 
+                   vw(1920, $maxWidth) auto;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    margin-left: 0;
+
+    background-image: 
+                    url(../../img/advantage-girls.png),
+                    url(../../img/background-delivery-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: top 10.417vw left -16.016vw, 
+                         top 11.458vw left 0;
+    background-size: 145.964vw auto, 
+                     100vw auto;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    background-position: top 10.417vw left calc(-163px + 450 * ((100vw - 320px) / 1600)), 
+                         top 11.458vw left 0;
+    background-size: calc(683px + (1349 - 683) * ((100vw - 320px) / 1600)) auto, 
+                     100vw auto;
+  }
+}
+
+.features__wrapper {
+  padding-top: vw(317, $maxWidth);
+  padding-bottom: vw(370, $maxWidth);
+  margin-left: vw(685, $maxWidth);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    padding-top: 948px;
+    padding-bottom: 175px;
+    margin-left: 0;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    @include adaptiv-value(padding-top, 1000, 508, 0);
+    padding-bottom: 100px;
+  }
+}
+
+.features__title {
+  margin-bottom: vw(85, $maxWidth);
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-bottom: 38px;
+  }
+}

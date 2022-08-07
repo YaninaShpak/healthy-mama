@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'global.scss';
+
+@import 'block/logo.scss';
+@import 'block/titles.scss';
+@import 'block/buttons/button-form.scss';
+@import 'block/buttons/button-menu.scss';
+
+@import 'block/header/header.scss';
+@import 'block/header/navigation.scss';
+
+
+@import 'block/menu.scss';
+
+@import 'block/content.scss';
+@import 'block/banner.scss';
+@import 'block/radio-slider.scss';
+@import 'block/proper-diet.scss';
+@import 'block/diet-list.scss';
+@import 'block/nutritionist-info.scss';
+@import 'block/features-list.scss';
+@import 'block/products.scss';
+@import 'block/swiper.scss';
+@import 'block/features.scss';
+@import 'block/instagram.scss';
+@import 'block/order.scss';
+@import 'block/order-form.scss';
+
+@import 'block/footer/footer.scss';
+@import 'block/footer/conditions-list.scss';

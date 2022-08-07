@@ -1,0 +1,25 @@
+.conditions-list {
+  display: flex;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    flex-direction: column;
+  }
+}
+
+.conditions-list__item {
+  margin-right: vw(38, $maxWidth);
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-bottom: 23px;
+  }
+}
+
+.conditions-list__link {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  color: $white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

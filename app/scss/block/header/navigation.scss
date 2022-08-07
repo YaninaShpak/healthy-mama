@@ -1,0 +1,26 @@
+.navigation {
+  @media (max-width: #{$mobileWidth + px}) {
+    display: none;
+  }
+}
+
+.navigation.show {
+  @media (max-width: #{$mobileWidth + px}) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 3;
+
+    display: block;
+    height: 100vh;
+  }
+}
+
+.navigation__list {
+  justify-content: flex-end;
+  margin-top: vw(5, $maxWidth);
+}
+
+
+

@@ -1,0 +1,43 @@
+.main-title {
+  font-weight: 700;
+  font-size: vw(50, $maxWidth);
+  line-height: calc(53 / 50);
+  color: #2B2B2B;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    font-size: 32px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    font-size: 25px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: vw(41, $maxWidth);
+  line-height: calc(48 / 41);
+  color: $green;
+  
+  @media (max-width: #{$tabletWidth + px}) {
+    font-size: 41px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    font-size: 22px;
+  }
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: vw(20, $maxWidth);
+  line-height: calc(24 / 20);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    font-size: 20px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,28 @@
+.products {
+  padding-top: vw(165, $maxWidth);
+
+  @media (max-width: #{$tabletWidth + px}) {
+    padding-top: 221px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    padding-top: 143px;
+  }
+}
+
+.products__title {
+  margin: 0 auto;
+  margin-bottom: vw(85, $maxWidth);
+  width: 26%;
+  
+  text-align: center;
+
+  @media (max-width: #{$tabletWidth + px}) {
+    width: 74%;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    width: 90%;
+  }
+}

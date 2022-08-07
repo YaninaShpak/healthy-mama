@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after,
+h1 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $fontFamily, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $black;
+
+  @media (min-width: #{$tabletWidth + px}) {
+    @include adaptiv-valueTablet(font-size, 16, 14);
+  }
+  
+  @media (max-width: #{$mobileWidth + px}) {
+    font-size: 14px;
+  }
+}
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  
+  overflow: hidden;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.container {
+  @include container(vw($maxWidthContainer, $maxWidth));
+
+  @media (max-width: #{$tabletWidth + px}) {
+    max-width: vw(580, 768);
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    max-width: vw(312, $minMobileWidth);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
