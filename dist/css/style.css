@@ -146,7 +146,7 @@ main {
 }
 
 .button-form::after {
-  content: url("../img/svgicons/arrow.svg");
+  content: url("../../../img/svgicons/arrow.svg");
   position: absolute;
   right: 7px;
   top: 50%;
@@ -399,7 +399,7 @@ main {
 }
 
 .no-webp .banner {
-  background-image: url(../img/background-banner.jpg); }
+  background-image: url(../../img/background-banner.jpg); }
 
 .banner {
   background-repeat: no-repeat;
@@ -420,7 +420,7 @@ main {
 }
 
 .no-webp .banner__mint::after {
-  background-image: url(../img/mint.png); }
+  background-image: url(../../img/mint.png); }
 
 .banner__mint::after {
   content: "";
@@ -709,7 +709,7 @@ main {
   position: relative;
   padding: 3.5416666667vw 0 0 0;
   background-color: #27AE60;
-  background-image: url(../img/svgicons/circles.svg), url(../img/svgicons/circles.svg);
+  background-image: url(../../img/svgicons/circles.svg), url(../../img/svgicons/circles.svg);
   background-repeat: no-repeat;
   background-position: left -206px bottom 114px, right -220px top 126px;
 }
@@ -756,7 +756,7 @@ main {
 }
 
 .diet-list__item::before {
-  content: url(../img/svgicons/checkmark-proper-diet.svg);
+  content: url(../../img/svgicons/checkmark-proper-diet.svg);
   top: -0.4166666667vw;
   left: 0;
   width: 0.5729166667vw;
@@ -825,19 +825,19 @@ main {
 }
 
 .features-list__item--eco-friendliness::before {
-  background-image: url(../img/svgicons/leaf.svg);
+  background-image: url(../../img/svgicons/leaf.svg);
 }
 
 .features-list__item--balance::before {
-  background-image: url(../img/svgicons/checkmark.svg);
+  background-image: url(../../img/svgicons/checkmark.svg);
 }
 
 .features-list__item--individuality::before {
-  background-image: url(../img/svgicons/curved-arrow.svg);
+  background-image: url(../../img/svgicons/curved-arrow.svg);
 }
 
 .features-list__item--benefit::before {
-  background-image: url(../img/svgicons/health-care.svg);
+  background-image: url(../../img/svgicons/health-care.svg);
 }
 
 .features-list__title {
@@ -930,7 +930,7 @@ main {
 }
 
 .no-webp .features {
-  background-image: url(../img/tree.png), url(../img/advantage-girls.png), url(../img/background-delivery.jpg); }
+  background-image: url(../../img/tree.png), url(../../img/advantage-girls.png), url(../../img/background-delivery.jpg); }
 
 .features {
   margin-bottom: 10px;
@@ -949,32 +949,32 @@ main {
   margin-bottom: 4.4270833333vw;
 }
 
-.instagram__title {
+.telegram__title {
   margin-bottom: 12px;
   text-align: center;
 }
 
-.instagram__text,
-.instagram__text a {
+.telegram__text,
+.telegram__text a {
   line-height: 1.1875;
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.instagram__text a {
+.telegram__text a {
   font-weight: 400;
   font-size: 16px;
   color: #000000;
   text-decoration: underline;
 }
 
-.instagram {
+.telegram {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.instagram img {
+.telegram img {
   width: 100vw;
   height: auto;
 }
@@ -1179,7 +1179,7 @@ main {
   }
 
   .no-webp .proper-diet::after {
-    background-image: linear-gradient(64.37deg, #27AE60 8.32%, rgba(255, 255, 255, 0) 82.9%), url(../img/pattern-proper-diet.png); }
+    background-image: linear-gradient(64.37deg, #27AE60 8.32%, rgba(255, 255, 255, 0) 82.9%), url(../../img/pattern-proper-diet.png); }
 
   .proper-diet::after {
     content: "";
@@ -1199,7 +1199,7 @@ main {
   }
 
   .diet-list__item::after {
-    content: url(../img/svgicons/checkmark-proper-diet.svg);
+    content: url(../../img/svgicons/checkmark-proper-diet.svg);
     top: 0.417vw;
     left: -0.3vw;
     width: 1.667vw;
@@ -1234,7 +1234,7 @@ main {
   }
 
   .no-webp .banner {
-    background-image: url(../img/background-banner-tablet.jpg); }
+    background-image: url(../../img/background-banner-tablet.jpg); }
 
   .banner__mint--biggest {
     width: 13.0208333333vw;
@@ -1371,7 +1371,7 @@ main {
 
   .proper-diet {
     padding: 50px 0 0 0;
-    background-image: url(../img/svgicons/circles.svg);
+    background-image: url(../../img/svgicons/circles.svg);
   }
 
   .proper-diet__wrapper {
@@ -1459,7 +1459,7 @@ main {
   }
 
   .no-webp .features {
-    background-image: url(../img/advantage-girls.png), url(../img/background-delivery-tablet.jpg); }
+    background-image: url(../../img/advantage-girls.png), url(../../img/background-delivery-tablet.jpg); }
 
   .features {
     margin-left: 0;
@@ -1474,12 +1474,12 @@ main {
     margin-left: 0;
   }
 
-  .instagram__text,
-  .instagram__text a {
+  .telegram__text,
+  .telegram__text a {
     text-shadow: none;
   }
 
-  .instagram img {
+  .telegram img {
     width: 1125px;
     height: auto;
   }
@@ -1793,7 +1793,7 @@ main {
     margin-bottom: 38px;
   }
 
-  .instagram img {
+  .telegram img {
     width: calc(700px + 1220 * ((100vw - 320px) / 1600));
     transform: translateX(75px);
   }
@@ -1855,23 +1855,23 @@ main {
   }
 }
 
-.webp .banner { background-image: url(../img/background-banner.webp); }
+.webp .banner { background-image: url(../../img/background-banner.webp); }
 
-.webp .banner__mint::after { background-image: url(../img/mint.webp); }
+.webp .banner__mint::after { background-image: url(../../img/mint.webp); }
 
-.webp .features { background-image: url(../img/tree.webp), url(../img/advantage-girls.webp), url(../img/background-delivery.webp); }
+.webp .features { background-image: url(../../img/tree.webp), url(../../img/advantage-girls.webp), url(../../img/background-delivery.webp); }
 
 @media (min-width: 1023.9px) {
 
-  .webp .proper-diet::after { background-image: linear-gradient(64.37deg, #27AE60 8.32%, rgba(255, 255, 255, 0) 82.9%), url(../img/pattern-proper-diet.webp); }
+  .webp .proper-diet::after { background-image: linear-gradient(64.37deg, #27AE60 8.32%, rgba(255, 255, 255, 0) 82.9%), url(../../img/pattern-proper-diet.webp); }
 }
 
 @media (max-width: 1023.9px) {
 
-  .webp .banner { background-image: url(../img/background-banner-tablet.webp); }
+  .webp .banner { background-image: url(../../img/background-banner-tablet.webp); }
 }
 
 @media (max-width: 1023.9px) {
 
-  .webp .features { background-image: url(../img/advantage-girls.webp), url(../img/background-delivery-tablet.webp); }
+  .webp .features { background-image: url(../../img/advantage-girls.webp), url(../../img/background-delivery-tablet.webp); }
 }
